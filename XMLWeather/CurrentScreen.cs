@@ -20,9 +20,25 @@ namespace XMLWeather
         public void DisplayCurrent()
         {
             cityOutput.Text = Form1.days[0].location;
-            tempLabel.Text = Form1.days[0].currentTemp;
-            minOutput.Text = Form1.days[0].tempLow;
-            maxOutput.Text = Form1.days[0].tempHigh;
+            
+            double currenttemp = Convert.ToDouble(Form1.days[0].currentTemp);
+            int currentTemp = Convert.ToInt32(currenttemp);
+            tempLabel.Text = currentTemp + "\u00B0 C";
+
+            double templow = Convert.ToDouble(Form1.days[0].tempLow);
+            int tempLow = Convert.ToInt32(templow);
+            minOutput.Text = tempLow + "\u00B0 C";
+
+            double temphigh = Convert.ToDouble(Form1.days[0].tempHigh);
+            int tempHigh = Convert.ToInt32(temphigh);
+            maxOutput.Text = currentTemp + "\u00B0 C";
+
+            double feelslike = Convert.ToDouble(Form1.days[0].feelsLike);
+            int feelsLike = Convert.ToInt32(feelslike);
+            feelsLikeLabel.Text = "Feels like: " + feelsLike + "\u00B0 C";
+
+            timeLabel.Text = DateTime.Now.ToString("hh:mm");
+            dateLabel.Text = DateTime.Now.ToString("yy-MM-dd");
         }
 
         private void forecastLabel_Click(object sender, EventArgs e)
