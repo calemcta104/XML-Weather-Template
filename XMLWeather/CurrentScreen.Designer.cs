@@ -38,6 +38,7 @@
             this.timeLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
             this.feelsLikeLabel = new System.Windows.Forms.Label();
+            this.conditionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cityOutput
@@ -57,7 +58,7 @@
             this.maxOutput.BackColor = System.Drawing.Color.Transparent;
             this.maxOutput.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxOutput.ForeColor = System.Drawing.Color.Red;
-            this.maxOutput.Location = new System.Drawing.Point(251, 331);
+            this.maxOutput.Location = new System.Drawing.Point(283, 331);
             this.maxOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.maxOutput.Name = "maxOutput";
             this.maxOutput.Size = new System.Drawing.Size(137, 68);
@@ -68,8 +69,8 @@
             // 
             this.minOutput.BackColor = System.Drawing.Color.Transparent;
             this.minOutput.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minOutput.ForeColor = System.Drawing.Color.Navy;
-            this.minOutput.Location = new System.Drawing.Point(68, 331);
+            this.minOutput.ForeColor = System.Drawing.Color.DarkBlue;
+            this.minOutput.Location = new System.Drawing.Point(41, 331);
             this.minOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.minOutput.Name = "minOutput";
             this.minOutput.Size = new System.Drawing.Size(125, 68);
@@ -82,7 +83,7 @@
             this.tempLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tempLabel.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempLabel.ForeColor = System.Drawing.Color.White;
-            this.tempLabel.Location = new System.Drawing.Point(153, 249);
+            this.tempLabel.Location = new System.Drawing.Point(143, 235);
             this.tempLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tempLabel.Name = "tempLabel";
             this.tempLabel.Size = new System.Drawing.Size(159, 106);
@@ -154,18 +155,29 @@
             this.feelsLikeLabel.BackColor = System.Drawing.Color.Transparent;
             this.feelsLikeLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.feelsLikeLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.feelsLikeLabel.Location = new System.Drawing.Point(133, 399);
+            this.feelsLikeLabel.Location = new System.Drawing.Point(145, 424);
             this.feelsLikeLabel.Name = "feelsLikeLabel";
             this.feelsLikeLabel.Size = new System.Drawing.Size(190, 26);
             this.feelsLikeLabel.TabIndex = 45;
             this.feelsLikeLabel.Text = "Feels like:";
+            // 
+            // conditionLabel
+            // 
+            this.conditionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.conditionLabel.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conditionLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.conditionLabel.Location = new System.Drawing.Point(130, 459);
+            this.conditionLabel.Name = "conditionLabel";
+            this.conditionLabel.Size = new System.Drawing.Size(223, 26);
+            this.conditionLabel.TabIndex = 46;
+            this.conditionLabel.Text = ".";
             // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.BackgroundImage = global::XMLWeather.Properties.Resources.cloudy_sky;
+            this.Controls.Add(this.conditionLabel);
             this.Controls.Add(this.feelsLikeLabel);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.timeLabel);
@@ -194,5 +206,6 @@
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label feelsLikeLabel;
+        private System.Windows.Forms.Label conditionLabel;
     }
 }
